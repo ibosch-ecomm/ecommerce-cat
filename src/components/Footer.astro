@@ -1,0 +1,61 @@
+---
+import LogoEcomm from './LogoEcomm.astro';
+---
+
+<footer class="bg-ecomm-blue text-white">
+  <div class="container-section py-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <!-- Logo and Info -->
+      <div class="space-y-4">
+        <LogoEcomm />
+        <p class="text-white/70">
+          Agència especialitzada en eCommerce a Catalunya. Transformem la teva visió en una botiga online que ven i fidelitza.
+        </p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div>
+        <h3 class="font-bold text-lg mb-4">Navegació</h3>
+        <ul class="space-y-2">
+          <li><a href="#proposta" class="text-white/70 hover:text-white">Proposta</a></li>
+          <li><a href="#serveis" class="text-white/70 hover:text-white">Serveis</a></li>
+          <li><a href="#metodologia" class="text-white/70 hover:text-white">Metodologia</a></li>
+          <li><a href="#projectes" class="text-white/70 hover:text-white">Projectes</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="font-bold text-lg mb-4">Contacte</h3>
+        <ul class="space-y-4 text-white/70">
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <a href="mailto:info@ecomm360.es" class="hover:text-white">info@ecomm360.es</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            <a href="tel:+34933903137" class="hover:text-white">(+34) 933 903 137</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            <span>Pla. Urquinaona, 6, 14B<br>08010, Barcelona, España</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h3 class="font-bold text-lg mb-4">Legal</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-white/70 hover:text-white">Política de Privacitat</a></li>
+          <li><a href="#" class="text-white/70 hover:text-white">Política de Cookies</a></li>
+          <li><a href="#" class="text-white/70 hover:text-white">Avís Legal</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-white/20 text-center text-white/50 text-sm">
+      <p>&copy; {new Date().getFullYear()} eCommerce.cat - Tots els drets reservats. Una iniciativa de eComm360.</p>
+    </div>
+  </div>
+</footer>
