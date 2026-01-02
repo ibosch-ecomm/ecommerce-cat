@@ -1,108 +1,84 @@
 ---
+// Hero Section amb imatge de fons real i overlay
 ---
 
-<section class="hero-gradient relative overflow-hidden min-h-screen flex items-center">
-  <!-- Background decorative elements -->
-  <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-white/10 rounded-full blur-3xl -mr-48 -mt-48 animate-pulse"></div>
-  <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -ml-48 -mb-48 animate-pulse" style="animation-delay: 1s;"></div>
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Imatge de fons -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="/hero-bg.jpg" 
+      alt="Equip eComm360 treballant" 
+      class="w-full h-full object-cover"
+    />
+    <!-- Overlay fosc blau -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#1B5585]/95 via-[#1B5585]/90 to-[#55C7DC]/85"></div>
+  </div>
 
-  <div class="container-section relative z-10 w-full">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <!-- Content -->
-      <div class="text-white space-y-8">
-        <div class="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 rounded-full backdrop-blur-md border border-white/30 shadow-lg">
-          <span class="w-2 h-2 bg-ecomm-turquoise rounded-full animate-pulse"></span>
-          <span class="text-sm font-bold text-white tracking-wide">DESENVOLUPAMENT ECOMMERCE PROFESSIONAL</span>
-        </div>
-        
-        <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight">
-          Creem experiències
-          <span class="block text-ecomm-turquoise mt-2">eCommerce úniques</span>
-          <span class="block mt-2">i rentables</span>
-        </h1>
-        
-        <p class="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
-          Transformem la teva visió en una botiga online que <strong class="text-ecomm-turquoise">vén i fidelitza</strong>. Com agència eCommerce especialitzada, desenvolupem plataformes que s'integren completament en els teus processos.
-        </p>
+  <!-- Contingut -->
+  <div class="relative z-10 container-section text-center text-white">
+    <!-- Badge superior -->
+    <div class="mb-8 inline-block">
+      <span class="inline-flex items-center px-6 py-3 rounded-full text-sm font-semibold tracking-wide uppercase bg-white/10 backdrop-blur-sm border border-white/20">
+        Desenvolupament eCommerce Professional
+      </span>
+    </div>
 
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-5 pt-4">
-          <a href="#contacte" class="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-ecomm-blue bg-white rounded-2xl shadow-2xl hover:shadow-ecomm-turquoise/50 transition-all duration-300 transform hover:scale-105">
-            <span>Demana una consulta</span>
-            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-            </svg>
-          </a>
-          <a href="#serveis" class="inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-white/10 rounded-2xl border-2 border-white/30 backdrop-blur-md hover:bg-white hover:text-ecomm-blue transition-all duration-300 transform hover:scale-105 shadow-lg">
-            Descobreix els nostres serveis
-          </a>
-        </div>
+    <!-- Títol principal MOLT gran -->
+    <h1 class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-tight">
+      Creem experiències<br />
+      <span class="text-[#55C7DC]">eCommerce</span> úniques<br />
+      i rentables
+    </h1>
 
-        <!-- Trust badges -->
-        <div class="mt-16 pt-10 border-t border-white/20 grid grid-cols-3 gap-8">
-          <div class="text-center lg:text-left">
-            <div class="text-5xl font-extrabold text-ecomm-turquoise mb-2">50+</div>
-            <div class="text-sm text-white/80 font-medium">Projectes completats</div>
-          </div>
-          <div class="text-center lg:text-left">
-            <div class="text-5xl font-extrabold text-ecomm-turquoise mb-2">10+</div>
-            <div class="text-sm text-white/80 font-medium">Anys d'experiència</div>
-          </div>
-          <div class="text-center lg:text-left">
-            <div class="text-5xl font-extrabold text-ecomm-turquoise mb-2">5</div>
-            <div class="text-sm text-white/80 font-medium">Plataformes dominades</div>
-          </div>
-        </div>
+    <!-- Subtítol -->
+    <p class="text-xl md:text-2xl lg:text-3xl mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+      Transformem la teva visió en una botiga online que <strong class="font-semibold">vén i fidelitza</strong>. 
+      Com agència eCommerce especialitzada, desenvolupem plataformes que s'integren completament en els teus processos.
+    </p>
+
+    <!-- Botons CTA -->
+    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+      <a 
+        href="#contacte" 
+        class="group px-10 py-5 bg-[#55C7DC] text-[#1B5585] font-bold text-lg rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-[#55C7DC]/50 hover:scale-105 hover:bg-white inline-flex items-center gap-3"
+      >
+        Demana una consulta
+        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </a>
+      <a 
+        href="#serveis" 
+        class="px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-bold text-lg rounded-2xl transition-all duration-300 border-2 border-white/30 hover:bg-white hover:text-[#1B5585] hover:scale-105 inline-flex items-center gap-3"
+      >
+        Descobreix els nostres serveis
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Estadístiques -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="backdrop-blur-md bg-white/10 rounded-2xl p-8 border border-white/20">
+        <div class="text-5xl md:text-6xl font-bold text-[#55C7DC] mb-2">50+</div>
+        <div class="text-lg md:text-xl font-light">Projectes completats</div>
       </div>
-
-      <!-- Visual element -->
-      <div class="hidden lg:block relative">
-        <div class="relative w-full aspect-square">
-          <!-- Animated decorative gradient box -->
-          <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-3xl border-2 border-white/30 backdrop-blur-md shadow-2xl transform rotate-3 transition-transform hover:rotate-6"></div>
-          <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl border-2 border-white/20 backdrop-blur-md shadow-2xl transform -rotate-3 transition-transform hover:-rotate-6"></div>
-          
-          <!-- Icon/Illustration -->
-          <div class="absolute inset-0 flex items-center justify-center">
-            <svg
-              viewBox="0 0 400 400"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4/5 h-4/5 text-white/30"
-            >
-              <circle cx="200" cy="200" r="150" stroke="currentColor" stroke-width="3" class="animate-pulse" />
-              <path d="M200 100 L300 200 L200 300 L100 200 Z" stroke="currentColor" stroke-width="3" fill="none" class="animate-pulse" style="animation-delay: 0.5s;" />
-              <circle cx="200" cy="200" r="30" stroke="currentColor" stroke-width="3" class="animate-pulse" style="animation-delay: 1s;" />
-            </svg>
-          </div>
-        </div>
+      <div class="backdrop-blur-md bg-white/10 rounded-2xl p-8 border border-white/20">
+        <div class="text-5xl md:text-6xl font-bold text-[#55C7DC] mb-2">10+</div>
+        <div class="text-lg md:text-xl font-light">Anys d'experiència</div>
+      </div>
+      <div class="backdrop-blur-md bg-white/10 rounded-2xl p-8 border border-white/20">
+        <div class="text-5xl md:text-6xl font-bold text-[#55C7DC] mb-2">5</div>
+        <div class="text-lg md:text-xl font-light">Plataformes dominades</div>
       </div>
     </div>
-  </div>
 
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-    <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-    </svg>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-8 h-8 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
   </div>
 </section>
-
-<style>
-  .hero-gradient {
-    background: linear-gradient(135deg, #1B5585 0%, #0d3a5c 50%, #55C7DC 100%);
-  }
-
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
-
-  .animate-pulse {
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-</style>
