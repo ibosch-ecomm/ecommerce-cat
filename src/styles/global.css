@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-ecomm-blue font-sans;
+  }
+
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-bold tracking-tight;
+  }
+
+  h4 {
+    @apply text-xl font-bold tracking-tight;
+  }
+
+  a {
+    @apply text-ecomm-turquoise hover:text-ecomm-blue transition-colors;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-ecomm-turquoise text-white font-semibold rounded-lg hover:bg-ecomm-blue transition-colors shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-white text-ecomm-blue border-2 border-ecomm-turquoise font-semibold rounded-lg hover:bg-ecomm-turquoise hover:text-white transition-colors;
+  }
+
+  .container-section {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+  }
+
+  .hero-gradient {
+    @apply bg-gradient-to-br from-ecomm-blue via-blue-600 to-ecomm-turquoise;
+  }
+
+  .card-base {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-ecomm-blue to-ecomm-turquoise bg-clip-text text-transparent;
+  }
+}

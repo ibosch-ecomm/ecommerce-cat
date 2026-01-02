@@ -1,0 +1,61 @@
+---
+import LogoEcomm from './LogoEcomm.astro';
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+  <nav class="container-section flex items-center justify-between py-4">
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <LogoEcomm />
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#proposta" class="text-ecomm-gray hover:text-ecomm-blue transition-colors font-medium">
+        Proposta
+      </a>
+      <a href="#aqui-va-dirigit" class="text-ecomm-gray hover:text-ecomm-blue transition-colors font-medium">
+        A qui va dirigit
+      </a>
+      <a href="#serveis" class="text-ecomm-gray hover:text-ecomm-blue transition-colors font-medium">
+        Serveis
+      </a>
+      <a href="#metodologia" class="text-ecomm-gray hover:text-ecomm-blue transition-colors font-medium">
+        Metodologia
+      </a>
+      <a href="#projectes" class="text-ecomm-gray hover:text-ecomm-blue transition-colors font-medium">
+        Projectes
+      </a>
+      <a href="#testimonios" class="text-ecomm-gray hover:text-ecomm-blue transition-colors font-medium">
+        Testimonis
+      </a>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="flex items-center gap-4">
+      <a href="tel:+34933903137" class="hidden sm:inline-block text-ecomm-blue font-semibold hover:text-ecomm-turquoise transition-colors">
+        (+34) 933 903 137
+      </a>
+      <a href="#contacte" class="btn-primary text-sm">
+        Contacta
+      </a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
