@@ -10,7 +10,11 @@ export default defineConfig({
     mode: 'standalone'
   }),
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    server: {
+      host: true,
+      strictPort: false
+    }
   },
   server: {
     host: '0.0.0.0',
