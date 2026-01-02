@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Definir colores personalizados de eComm360 */
+@theme {
+  --color-ecomm-blue: #1B5585;
+  --color-ecomm-turquoise: #55C7DC;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -76,7 +82,12 @@
   }
 
   .card-feature {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-10 border-2 border-transparent hover:border-ecomm-turquoise transform hover:-translate-y-2;
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-10 border-2 transform hover:-translate-y-2;
+    border-color: transparent;
+  }
+
+  .card-feature:hover {
+    border-color: #55C7DC;
   }
 
   .text-gradient {
@@ -85,7 +96,11 @@
   }
 
   .section-title {
-    @apply text-4xl lg:text-5xl font-bold text-center mb-6 text-gradient;
+    @apply text-4xl lg:text-5xl font-bold text-center mb-6;
+    background: linear-gradient(135deg, #1B5585, #55C7DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .section-subtitle {
@@ -93,11 +108,12 @@
   }
 
   .badge {
-    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-ecomm-turquoise/10 text-ecomm-blue border border-ecomm-turquoise/20;
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold border;
+    background-color: rgba(85, 199, 220, 0.1);
+    color: #1B5585;
+    border-color: rgba(85, 199, 220, 0.2);
   }
-}
 
-@layer utilities {
   .text-ecomm-blue {
     color: #1B5585;
   }
@@ -112,13 +128,5 @@
 
   .bg-ecomm-turquoise {
     background-color: #55C7DC;
-  }
-
-  .border-ecomm-blue {
-    border-color: #1B5585;
-  }
-
-  .border-ecomm-turquoise {
-    border-color: #55C7DC;
   }
 }
