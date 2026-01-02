@@ -24,11 +24,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --only=production --legacy-peer-deps
 
-# Copiar la aplicación construida desde el builder
+# Copiar TODA la aplicación construida desde el builder
 COPY --from=builder /app/dist ./dist
-
-# Copiar archivos públicos si es necesario
-COPY --from=builder /app/public ./public
 
 # Exponer puerto
 EXPOSE 3000
